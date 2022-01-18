@@ -1,7 +1,7 @@
 # Личный проект «Седона»
 
 * Студент: [Валерия Гарцева](https://up.htmlacademy.ru/htmlcss/33/user/1896209).
-* Наставник: `Неизвестно`.
+* Наставник: [Владислав Зубко](https://htmlacademy.ru/profile/whatislove).
 
 ---
 
