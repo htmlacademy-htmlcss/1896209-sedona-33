@@ -118,21 +118,23 @@
           <button class="button-reset" type="reset">Сбросить</button>
         </form>
 
-        <p class="search-result">Найдено гостиниц: 38</p>
-        <select class="select-control" aria-label="Сортировка">
-          <option value="cheap">Сначала дешёвое</option>
-          <option value="popular">Сначала популярное</option>
-          <option value="expensive">Сначала дорогое</option>
-        </select>
-        <a href="#" class="button-light">
-          <span class="visually-hidden">Показать карточки</span>
-        </a>
-        <a href="#" class="button-light">
-          <span class="visually-hidden">Показать слайды</span>
-        </a>
-        <a href="#" class="button-light">
-          <span class="visually-hidden">Показать список</span>
-        </a>
+        <div class="sorting-container">
+          <p class="search-result">Найдено гостиниц: 38</p>
+          <select class="select-control" aria-label="Сортировка">
+            <option value="cheap">Сначала дешёвое</option>
+            <option value="popular">Сначала популярное</option>
+            <option value="expensive">Сначала дорогое</option>
+          </select>
+          <a href="#" class="button-light">
+            <span class="visually-hidden">Показать карточки</span>
+          </a>
+          <a href="#" class="button-light">
+            <span class="visually-hidden">Показать слайды</span>
+          </a>
+          <a href="#" class="button-light">
+            <span class="visually-hidden">Показать список</span>
+          </a>
+        </div>
 
         <ul class="catalog-list">
           <li class="catalog-card">
@@ -182,38 +184,42 @@
         </ul>
 
         <button class="pagination-show-more button-blue" type="button">Загрузить ещё</button>
-        <ul class="pagination">
-          <li class="pagination-item">
-            <a class="pagination-link current" href="#">1</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">2</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">3</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">4</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">...</a>
-          </li>
-          <li class="pagination-item">
-            <a class="pagination-link" href="#">10</a>
-          </li>
-        </ul>
+        <div class="pagination-container">
+          <ul class="pagination">
+            <li class="pagination-item">
+              <a class="pagination-link current" href="#">1</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">2</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">3</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">4</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">...</a>
+            </li>
+            <li class="pagination-item">
+              <a class="pagination-link" href="#">10</a>
+            </li>
+          </ul>
 
-        <p class="select-text">Гостиниц на странице:</p>
-        <select class="select-control" aria-label="Количество гостиниц на странице">
-          <option value="">4</option>
-          <option value="">5</option>
-          <option value="">6</option>
-        </select>
+          <div class="select">
+            <p class="select-text">Гостиниц на странице:</p>
+            <select class="select-control" aria-label="Количество гостиниц на странице">
+              <option value="">4</option>
+              <option value="">5</option>
+              <option value="">6</option>
+            </select>
+          </div>
+        </div>
       </section>
 
       <section class="distribution-light">
-        <h2 class="distribution-title">Подпишитесь на рассылку</h2>
-        <p>Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
+        <h2 class="distribution-title light">Подпишитесь на рассылку</h2>
+        <p class="distribution-description light">Только полезная информация и никакого спама,<br> честное бойскаутское!</p>
         <form class="distribution-form" action="https://echo.htmlacademy.ru/" method="post">
           <input type="text" placeholder="Ваш e-mail">
           <button class="button-blue" type="submit">Подписаться</button>
