@@ -31,6 +31,17 @@
   font-display: swap;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 .html {
   width: 100%;
 }
@@ -54,7 +65,7 @@ body {
 
 .navigation {
   display: flex;
-  width: 1060px;
+  width: 1200px;
   margin: 0 auto;
 }
 
@@ -136,8 +147,6 @@ body {
 }
 
 .advantages-list {
-  display: flex;
-  justify-content: space-between;
   margin: 0;
   padding: 0;
   text-align: center;
@@ -145,8 +154,52 @@ body {
   list-style-type: none;
 }
 
-.advantages-item {
-  width: 400px;
+.advantages-number-1 {
+  display: grid;
+  grid-template-rows: 384px;
+  grid-template-columns: repeat( 3, 400px );
+}
+
+.advantages-content-number-1 {
+  grid-row: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  width: 220px;
+  justify-self: center;
+  align-self: center;
+}
+
+.photo-1 {
+  grid-column: 2 / 4;
+}
+
+.advantages-number-2 {
+  display: grid;
+  grid-template-rows: 384px;
+  grid-template-columns: repeat( 3, 400px );
+}
+
+.advantages-content-number-2 {
+  grid-column: 3 / 4;
+  display: flex;
+  flex-direction: column;
+  color: #ffffff;
+  width: 220px;
+  justify-self: center;
+  align-self: center;
+}
+
+.advantages-the-rest {
+  display: grid;
+  grid-template-rows: 384px;
+  grid-template-columns: repeat( 3, 400px );
+}
+
+.the-rest-item {
+  width: 250px;
+  justify-self: center;
+  align-self: center;
 }
 
 .advantages-title {
@@ -159,18 +212,39 @@ body {
 }
 
 .advantages-description {
-  margin: 0;
+  margin: 0 auto;
   margin-top: 30px;
   margin-bottom: 87px;
 }
 
+.advantages-list-item {
+  display: grid;
+  grid-template-rows: 384px;
+  grid-template-columns: repeat( 3, 400px );
+  list-style-type: none;
+  padding: 0;
+}
+
+.advantages-list-item-item {
+  justify-self: center;
+  align-self: center;
+}
+
+.advantages-food {
+  background-color: #ffffff;
+}
+
 .advantages-list-item-title {
-  margin-top: 97px;
-  margin-bottom: 30px;
   font-size: 24px;
   line-height: 28px;
   font-weight: 700;
   text-transform: uppercase;
+}
+
+.advantages-list-item-description {
+  width: 250px;
+  margin-top: 20px;
+  color: #333333;
 }
 
 .search {
@@ -268,7 +342,7 @@ body {
 
 .page-footer-container {
   display: flex;
-  width: 1060px;
+  width: 1200px;
   margin: 0 auto;
   padding: 40px 0;
 }
@@ -317,7 +391,7 @@ body {
 }
 
 .footer-contact {
-  margin: 0 auto;
+  text-align: center;
 }
 
 .main-inner {
@@ -351,8 +425,10 @@ body {
 
 .catalog-filter {
   display: flex;
-  width: 1060px;
+  width: 1200px;
   justify-content: space-between;
+  align-items: flex-end;
+  margin-top: 45px;
   padding-bottom: 83px;
 }
 
@@ -374,11 +450,29 @@ body {
   font-weight: 700;
 }
 
-.button-reset {
+.filter-button {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.filter-button-blue {
+  color: #ffffff;
+  background-color: #83B3D3;
+  font-size: 16px;
+  line-height: 21px;
+  font-weight: 700;
+  height: 48px;
+  width: 160px;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.filter-button-reset {
   color: #ffffff;
   font-size: 18px;
   line-height: 23px;
-  text-align: center;
+  background: none;
 }
 
 .sorting-container {
@@ -402,31 +496,58 @@ body {
 }
 
 .catalog-list {
-  display: flex;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 340px);
+  column-gap: 18px;
+  row-gap: 10px;
+  justify-content: center;
   list-style-type: none;
   margin: 0;
   padding: 0;
+  margin-bottom: 64px;
 }
 
 .catalog-card {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
   font-size: 16px;
   line-height: 21px;
   color: #333333;
-  width: 340px;
 }
 
-.catalog-card-image {
-  width: 300px;
-  height: 206px;
+.catalog-content {
+  display: grid;
+  grid-template-columns: 133px auto;
+  grid-template-rows: auto auto auto;
+  row-gap: 16px;
+  column-gap: 25px;
+  margin-top: 16px;
 }
 
 .catalog-card-title {
-  margin: 16px 0;
+  margin: 0;
+  margin-top: 16px;
   color: #000000;
   font-size: 24px;
   line-height: 31px;
   text-decoration: none;
+}
+
+.catalog-card-button {
+  text-align: center;
+  font-size: 16px;
+  line-height: 21px;
+  text-transform: uppercase;
+  font-weight: 700;
+  text-decoration: none;
+  height: 28px;
+  padding-top: 9px;
+}
+
+.button-active {
+  color: #ffffff;
+  background-color: #7DB54F;
 }
 
 .catalog-card b {
