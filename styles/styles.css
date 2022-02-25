@@ -109,6 +109,14 @@ body {
   background-color: #ffffff;
 }
 
+.navigation-link:hover {
+  color: #756257;
+}
+
+.navigation-link:focus {
+
+}
+
 .menu {
   padding: 20px 17px;
 }
@@ -133,6 +141,16 @@ body {
   fill: #000000;
 }
 
+/*Почему иконка не меняет цвет*/
+
+.navigation-link:hover .navigation-icon {
+  fill: #756257;
+}
+
+.navigation-link:focus .navigation-icon{
+
+}
+
 .button-navigation-user {
   color: #ffffff;
   background-color: #756257;
@@ -147,6 +165,17 @@ body {
   text-decoration: none;
   border: none;
   width: 130px;
+}
+
+.button-navigation-user:hover {
+  color: #ffffff;
+  background-color: #615048;
+}
+
+.button-navigation-user:focus {
+  background-color: #615048;
+  border: 3px solid #83B3D3;
+  padding: 6px 12px;
 }
 
 /* Главное окно */
@@ -394,6 +423,18 @@ body {
   border-radius: 10px;
 }
 
+.search-button:hover {
+  color: #ffffff;
+  background-color: #615048;
+}
+
+.search-button:focus{
+  background-color: #615048;
+  border: 3px solid #83B3D3;
+  padding-top: 9px;
+  padding-bottom: 9px;
+}
+
 /* Форма подписки на рассылку */
 
 .distribution {
@@ -460,6 +501,17 @@ body {
   background-color: #F2F2F2;
 }
 
+.distribution-text:hover {
+  background-color: #E6E6E6;
+}
+
+/*что творит этот плэйсхолдер*/
+
+.distribution-text:focus {
+  background-color: #E6E6E6;
+  border: 3px solid #83B3D3;
+}
+
 .distribution-button {
   font-family: inherit;
   color: #ffffff;
@@ -473,6 +525,15 @@ body {
   text-decoration: none;
   border-radius: 0px 10px 10px 0px;
   border: none;
+}
+
+.distribution-button:hover {
+  background-color: #68A2CA;
+}
+
+.distribution-button:focus {
+  background-color: #68A2CA;
+  border: 3px solid #756257;
 }
 
 /* Подвал */
@@ -498,6 +559,16 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   text-align: center;
+}
+
+.footer-contact a:hover {
+  color: #756257;
+}
+
+.footer-contact a:focus {
+  color: #756257;
+  border: 3px solid #83B3D3;
+  border-radius: 10px;
 }
 
 .footer-social {
@@ -540,6 +611,10 @@ body {
   padding-top: 3px;
 }
 
+.footer-social-twitter:hover {
+  background: #68A2CA;
+}
+
 .footer-social-facebook{
   background-image: url("../image/icon-facebook.svg");
   width: 10px;
@@ -558,6 +633,16 @@ body {
   margin-left: 53px;
   max-width: 115px;
   height: 34px;
+}
+
+/*Так, тут как у иконок*/
+
+.footer-logo:hover {
+
+}
+
+.footer-logo:focus {
+
 }
 
 /* Страница каталога */
