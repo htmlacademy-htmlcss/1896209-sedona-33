@@ -58,6 +58,10 @@ body {
   background-color: #ffffff;
 }
 
+*, ::after, ::before {
+  box-sizing: border-box;
+}
+
 /* Навигация */
 
 .page-header {
@@ -95,7 +99,7 @@ body {
 .navigation-link {
   position: relative;
   display: block;
-  padding: 24px 12px;
+  padding: 33px 21px;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
@@ -169,7 +173,7 @@ body {
   text-transform: uppercase;
   text-decoration: none;
   border: none;
-  width: 130px;
+  width: 160px;
 }
 
 .button-navigation-user:hover {
@@ -223,7 +227,7 @@ body {
 .page-container {
   width: 1200px;
   margin: 0 auto;
-  background-image: url(../image/divider\ \(1\).svg);
+  background-image: url(../image/bottom-decor.svg);
   background-repeat: no-repeat;
   background-position-x: center;
   background-position-y: 14.65%;
@@ -258,7 +262,7 @@ body {
 
 .slogan-advantages {
   font-size: 22px;
-  line-height: 26px;
+  line-height: 36px;
   color: #333333;
   margin: 0;
   padding-top: 31px;
@@ -487,7 +491,7 @@ body {
   background-image: url("../image/background/background-main-page-footer.jpg");
   background-repeat: no-repeat;
   background-size: 100% auto;
-  height: 317px;
+  height: 411px;
 }
 
 .distribution-light {
@@ -533,12 +537,12 @@ body {
 
 .distribution-text {
   font-family: inherit;
-  width: 559px;
+  width: 600px;
   border-radius: 10px 0px 0px 10px;
-  border: none;
-  padding-left: 22px;
-  padding-right: 19px;
+  padding-left: 19px;
+  padding-right: 16px;
   background-color: #F2F2F2;
+  border: 3px solid transparent;
 }
 
 .distribution-text:hover {
@@ -547,12 +551,14 @@ body {
 
 .distribution-text:focus {
   background-color: #E6E6E6;
-  outline: 3px solid #83B3D3;
+  border: 3px solid #83B3D3;
+  outline: none;
 }
 
 .distribution-text:invalid {
   background-color: #FFFFFF;
-  outline: 2px solid #FF5757;
+  border: 2px solid #FF5757;
+  outline: none;
 }
 
 .distribution-button {
@@ -617,6 +623,7 @@ body {
   color: #756257;
   border: 3px solid #83B3D3;
   border-radius: 10px;
+  padding: 12px;
 }
 
 .footer-contact a:active {
@@ -634,7 +641,6 @@ body {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  width: 107px;
   margin-right: 61px;
   margin-left: 72px;
 }
@@ -650,6 +656,7 @@ body {
 .footer-social-link {
   display: block;
   background-color: #ffffff;
+  height: 18px;
 }
 
 .footer-social-icon {
@@ -665,7 +672,10 @@ body {
   outline: 3px solid #83B3D3;
   border-radius: 10px;
   padding: 12px 11px;
-  margin: -12px -11px;
+  margin-top: -12px;
+  margin-bottom: -12px;
+  margin-left: -11px;
+  margin-right: 18px;
 }
 
 .footer-social-facebook:focus {
@@ -673,7 +683,10 @@ body {
   outline: 3px solid #83B3D3;
   border-radius: 10px;
   padding: 11px 15px;
-  margin: -11px -15px;
+  margin-top: -11px;
+  margin-bottom: -11px;
+  margin-left: -15px;
+  margin-right: 14px;
 }
 
 .footer-social-youtube:focus {
@@ -681,7 +694,10 @@ body {
   outline: 3px solid #83B3D3;
   border-radius: 10px;
   padding: 12px 10px;
-  margin: -12px -10px;
+  margin-top: -12px;
+  margin-bottom: -12px;
+  margin-left: -10px;
+  margin-right: -10px;
 }
 
 
@@ -694,10 +710,12 @@ body {
   margin-left: 53px;
   margin-right: 72px;
   max-width: 115px;
+  box-sizing: content-box;
 }
 
 .logo-htmlacademy {
   fill: #000000;
+  box-sizing: content-box;
 }
 
 .logo-htmlacademy:hover {
@@ -727,6 +745,10 @@ body {
   background-repeat: no-repeat;
   background-size: 100% 408px;
 }
+.inner-header {
+  margin-left: 72px;
+  margin-right: 72px;
+}
 
 .inner-header-title {
   margin-top: 35px;
@@ -748,7 +770,58 @@ body {
 }
 
 .breadcrumbs-link {
+  position: relative;
   color: inherit;
+}
+
+.breadcrumbs-link-hotel:hover {
+  opacity: 0.6;
+}
+
+.breadcrumbs-link-hotel:focus {
+  outline: 3px solid #83B3D3;
+  border-radius: 4px;
+  padding: 0 5px;
+  margin: 0 -5px;
+}
+
+.breadcrumbs-link-hotel:active {
+  opacity: 0.3;
+}
+
+.breadcrumbs-link-icon {
+  fill: #ffffff;
+  margin-right: 26px;
+}
+
+.breadcrumbs-link-icon:hover {
+  opacity: 0.6;
+}
+
+.breadcrumbs-link-icon:focus {
+  outline: 3px solid #83B3D3;
+  border-radius: 4px;
+  padding: 0 5px;
+  padding-top: 4px;
+  padding-bottom: 5px;
+  margin: 0 -5px;
+  margin-right: 21px;
+  margin-top: -4px;
+  margin-bottom: -5px
+}
+
+.breadcrumbs-link-icon:active {
+  opacity: 0.3;
+}
+
+.breadcrumbs-link-pointer {
+  fill: #ffffff;
+  opacity: 0.3;
+  position: absolute;
+  top: 9px;
+  right: 0;
+  bottom: 0;
+  left: 22px;
 }
 
 /* Фильтры */
@@ -756,28 +829,51 @@ body {
 .catalog-filter {
   display: flex;
   width: 1200px;
-  justify-content: space-between;
   align-items: flex-end;
   margin-top: 45px;
   margin-bottom: 83px;
+  margin-left: 72px;
+  margin-right: 72px;
 }
 
 .catalog-filter-group {
+  border: none;
   color: #ffffff;
   font-size: 18px;
   line-height: 23px;
+  margin: 0;
+  padding: 0;
+}
+
+.infrastructure {
+  margin-right: 67px;
+}
+
+.type-of-housing {
+  margin-right: 167px;
 }
 
 .catalog-filter-list {
   list-style-type: none;
+  margin: 0;
+  padding: 0;
+  margin-top: 30px;
 }
 
 .catalog-filter-title{
-  margin-top: 71px;
   margin-bottom: 0;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
+  padding: 0;
+}
+
+.catalog-filter-item:not(:last-child) {
+  margin-bottom: 13px;
+}
+
+.control-input {
+  margin: 0;
 }
 
 .filter-button {
@@ -816,11 +912,36 @@ body {
   align-items: center;
   margin-top: 127px;
   margin-bottom: 53px;
+  margin-left: 72px;
+  margin-right: 72px;
 }
 
-.sorting-container .button-light {
+.sorting-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
   width: 48px;
   height: 48px;
+  border: 2px solid #E6E6E6;
+  border-radius: 4px;
+}
+
+.sorting-button-tile-current {
+  border: 2px solid #000000;
+  border-radius: 4px;
+}
+
+.sorting-button-list {
+  margin-left: 8px;
+}
+
+.sorting-button-slideshow {
+  margin-left: 8px;
+}
+
+.sorting-button-link {
+  fill: #000000;
 }
 
 .search-result {
@@ -842,6 +963,8 @@ body {
   margin: 0;
   padding: 0;
   margin-bottom: 64px;
+  margin-left: 72px;
+  margin-right: 72px;
 }
 
 .catalog-card {
@@ -943,8 +1066,10 @@ body {
 
 .pagination-container {
   display: flex;
-  padding: 30px;
+  padding: 30px 0;
   background-color: #ffffff;
+  margin-left: 72px;
+  margin-right: 72px;
 }
 
 .pagination {
@@ -986,12 +1111,23 @@ body {
 }
 
 .select-control {
-  width: 160px;
-  height: 48px;
-  margin-left: 51px;
   border: 2px solid #E6E6E6;
   border-radius: 4px;
   align-self: center;
+  width: 287px;
+  height: 48px;
+  padding-left: 19px;
+  padding-right: 20px;
+  padding-top: 12px;
+  padding-bottom: 13px;
+  font-size: 18px;
+  line-height: 23px;
+}
+
+.sorting-type {
+  margin-left: 192px;
+  margin-right: auto;
+
 }
 
 .select-text {
