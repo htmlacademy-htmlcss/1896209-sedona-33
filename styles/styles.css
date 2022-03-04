@@ -501,6 +501,7 @@ body {
   line-height: 26px;
   text-align: center;
   margin-top: 43px;
+  margin-bottom: 100px;
 }
 
 .distribution-title {
@@ -896,12 +897,42 @@ body {
   border: none;
 }
 
+.filter-button-submit:hover {
+  background-color: #68A2CA;
+}
+
+.filter-button-submit:focus {
+  background-color: #68A2CA;
+  border: 3px solid #FFFFFF;
+}
+
+.filter-button-submit:active {
+  background-color: #68A2CA;
+  color: #FFFFFF4D;
+}
+
 .filter-button-reset {
   color: #ffffff;
   font-size: 18px;
   line-height: 23px;
   background: none;
   border: none;
+  width: 100px;
+  height: 32px;
+  margin-left: 30px;
+}
+
+.filter-button-reset:hover {
+  color: #FFFFFF99;
+}
+
+.filter-button-reset:focus {
+  border: 3px solid #83B3D3;
+  border-radius: 4px;
+}
+
+.filter-button-reset:active {
+  color: #FFFFFF4D;
 }
 
 .sorting-container {
@@ -925,6 +956,18 @@ body {
   height: 48px;
   border: 2px solid #E6E6E6;
   border-radius: 4px;
+}
+
+.sorting-button:hover {
+  border: 2px solid #83B3D3;
+}
+
+.sorting-button:focus {
+  border: 2px solid #83B3D3;
+}
+
+.sorting-button:active {
+  border: 2px solid #000000;
 }
 
 .sorting-button-tile-current {
@@ -951,7 +994,36 @@ body {
   text-transform: uppercase;
 }
 
+.sorting-select-control {
+  font-size: 18px;
+  line-height: 23px;
+  border: 2px solid #E6E6E6;
+  border-radius: 4px;
+  align-self: center;
+  width: 287px;
+  height: 48px;
+  padding-left: 19px;
+  padding-top: 12px;
+  padding-bottom: 13px;
+}
+
+.sorting-select-control:hover {
+  border: 2px solid #83B3D3;
+}
+
+.sorting-select-control:focus {
+  border: 2px solid #83B3D3;
+}
+
+.sorting-select-control:active {
+  color: #3333334D;
+}
+
 /* Каталог */
+
+.catalog {
+  position: relative;
+}
 
 .catalog-list {
   display: grid;
@@ -976,6 +1048,18 @@ body {
   color: #333333;
 }
 
+.catalog-card-image:hover {
+  opacity: 0.6;
+}
+
+.catalog-card-image:focus {
+  border: 3px solid #83B3D3;
+}
+
+.catalog-card-image:active {
+  opacity: 0.3;
+}
+
 .catalog-content {
   display: grid;
   grid-template-columns: 133px auto;
@@ -987,7 +1071,7 @@ body {
 
 .catalog-card-title {
   margin: 0;
-  margin-top: 16px;
+  margin-top: 11px;
   color: #000000;
   font-size: 24px;
   line-height: 31px;
@@ -999,14 +1083,68 @@ body {
   background-color: #756257;
 }
 
+.button-more:hover {
+  background-color: #615048;
+}
+
+.button-more:focus {
+  border: 3px solid #83B3D3;
+  background-color: #615048;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.button-more:active {
+  color: #FFFFFF4D;
+  background-color: #615048;
+}
+
 .button-favorite {
   color: #ffffff;
   background-color: #83B3D3;
 }
 
+.button-favorite:hover {
+  background-color: #68A2CA;
+  border: 1px solid #756257;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.button-favorite:focus {
+  border: 3px solid #756257;
+  background-color: #68A2CA;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.button-favorite:active{
+  border: 1px solid #756257;
+  background-color: #68A2CA;
+  color: #FFFFFF4D;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
 .button-active {
   color: #ffffff;
   background-color: #7DB54F;
+}
+
+.button-active:hover {
+  background-color: #6C9E42;
+}
+
+.button-active:focus{
+  background-color: #6C9E42;
+  border: 3px solid #756257;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.button-active:active{
+  background-color: #6C9E42;
+  color: #FFFFFF4D;
 }
 
 .catalog-card-button {
@@ -1016,9 +1154,9 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   text-decoration: none;
-  height: 18px;
-  padding-top: 9px;
-  padding-bottom: 10px;
+  /*height: 18px;*/
+  padding-top: 8px;
+  padding-bottom: 8px;
   border-radius: 4px;
 }
 .catalog-card b {
@@ -1028,19 +1166,59 @@ body {
   font-weight: 400;
 }
 
+.rating-scale {
+  grid-column: 1 / -1;
+  display: flex;
+}
+
+.rating-star {
+  align-self: center;
+}
+
+.rating-star:not(:last-child) {
+  margin-right: 7px;
+}
+
+.rating {
+  margin: 0;
+  margin-left: auto;
+  background: #F2F2F2;
+  color: #333333;
+  font-weight: 400;
+  text-transform: uppercase;
+  text-align: center;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  border-radius: 4px;
+  width: 160px;
+}
+
+/*Если p не в диве
+.rating-scale {
+  display: flex;
+  align-items: center;
+}
+
+.rating-star:not(:last-child) {
+  margin-right: 7px;
+}
+
 .rating {
   background: #F2F2F2;
-  height: 18px;
   text-align: center;
-  padding-top: 9px;
-  padding-bottom: 10px;
+  padding-top: 8px;
+  padding-bottom: 9px;
   border-radius: 4px;
   grid-row: 3 / 4;
-  grid-column: 2 / 3;
+  grid-column: 1 / -1;
+  justify-self: end;
+  width: 160px;
   margin: 0;
   text-transform: uppercase;
   color: #333333;
+  font-weight: 400;
 }
+*/
 
 /* Пагинация */
 
@@ -1062,6 +1240,28 @@ body {
   width: 620px;
   height: 60px;
   border-radius: 4px;
+}
+
+.pagination-show-more::before {
+  position: absolute;
+  content: "";
+  background-color: #E6E6E6;
+  right: 72px;
+  bottom: 0;
+  left: 72px;
+  top: 1040px;
+  height: 1px;
+}
+
+.pagination-show-more::after {
+  position: absolute;
+  content: "";
+  background-color: #E6E6E6;
+  right: 72px;
+  bottom: 0;
+  left: 72px;
+  top: 920px;
+  height: 1px;
 }
 
 .pagination-container {
@@ -1100,6 +1300,23 @@ body {
   border-radius: 4px;
 }
 
+.pagination-link:hover {
+  background-color: #68A2CA;
+  color: #FFFFFF;
+}
+
+.pagination-link:focus {
+  background-color: #68A2CA;
+  color: #FFFFFF;
+  border: 3px solid #756257;
+  padding: 14px;
+}
+
+.pagination-link:active {
+  background-color: #68A2CA;
+  color: #FFFFFF4D;
+}
+
 .current {
   color: #000000;
   background-color: #F2F2F2;
@@ -1112,14 +1329,14 @@ body {
 
 .select-control {
   border: 2px solid #E6E6E6;
+  color: #333333;
   border-radius: 4px;
   align-self: center;
-  width: 287px;
+  width: 160px;
   height: 48px;
-  padding-left: 19px;
-  padding-right: 20px;
-  padding-top: 12px;
-  padding-bottom: 13px;
+  padding-left: 17px;
+  padding-top: 13px;
+  padding-bottom: 12px;
   font-size: 18px;
   line-height: 23px;
 }
@@ -1135,6 +1352,7 @@ body {
   margin: 0;
   padding-top: 17px;
   padding-bottom: 17px;
+  margin-right: 51px;
 }
 
 .visually-hidden {
