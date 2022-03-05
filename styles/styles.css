@@ -945,6 +945,7 @@ body {
   margin-bottom: 53px;
   margin-left: 72px;
   margin-right: 72px;
+  position: relative;
 }
 
 .sorting-button {
@@ -1005,14 +1006,30 @@ body {
   padding-left: 19px;
   padding-top: 12px;
   padding-bottom: 13px;
+  appearance: none;
+  outline: none;
+}
+
+.sorting-type::before {
+  position: absolute;
+  top: 21px;
+  right: 0;
+  bottom: 0;
+  left: 783px;
+  content: "";
+  background-image: url(../image/select-control-pointer.svg);
+  background-repeat: no-repeat;
+  opacity: 30%;
 }
 
 .sorting-select-control:hover {
   border: 2px solid #83B3D3;
+
 }
 
 .sorting-select-control:focus {
   border: 2px solid #83B3D3;
+
 }
 
 .sorting-select-control:active {
@@ -1193,33 +1210,6 @@ body {
   width: 160px;
 }
 
-/*Если p не в диве
-.rating-scale {
-  display: flex;
-  align-items: center;
-}
-
-.rating-star:not(:last-child) {
-  margin-right: 7px;
-}
-
-.rating {
-  background: #F2F2F2;
-  text-align: center;
-  padding-top: 8px;
-  padding-bottom: 9px;
-  border-radius: 4px;
-  grid-row: 3 / 4;
-  grid-column: 1 / -1;
-  justify-self: end;
-  width: 160px;
-  margin: 0;
-  text-transform: uppercase;
-  color: #333333;
-  font-weight: 400;
-}
-*/
-
 /* Пагинация */
 
 .pagination-show-more {
@@ -1325,6 +1315,19 @@ body {
 .select {
   display: flex;
   margin-left: auto;
+  position: relative;
+}
+
+.select::before {
+  position: absolute;
+  top: 24px;
+  right: 0;
+  bottom: 0;
+  left: 353px;
+  content: "";
+  background-image: url(../image/select-control-pointer.svg);
+  background-repeat: no-repeat;
+  opacity: 30%;
 }
 
 .select-control {
@@ -1339,6 +1342,8 @@ body {
   padding-bottom: 12px;
   font-size: 18px;
   line-height: 23px;
+  appearance: none;
+  outline: none;
 }
 
 .sorting-type {
