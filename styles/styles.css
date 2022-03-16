@@ -47,6 +47,7 @@
 }
 
 body {
+  min-width: 1200px;
   margin: 0;
   display: flex;
   flex-direction: column;
@@ -74,6 +75,8 @@ body {
   width: 1200px;
   height: 66px;
   margin: 0 auto;
+  padding-left: 70px;
+  padding-right: 70px;
 }
 
 .page-header-logo{
@@ -84,13 +87,11 @@ body {
   bottom: 0;
   z-index: 1;
   margin-right: 30px;
-  margin-left: 70px;
 }
 
 .navigation-list {
   display: flex;
   flex-wrap: wrap;
-  width: 345px;
   margin: 0;
   padding: 0;
   list-style-type: none;
@@ -134,8 +135,8 @@ body {
 .navigation-user {
   max-width: 300px;
   margin-left: auto;
-  margin-right: 70px;
 }
+
 .navigation-item .navigation-link {
   min-width: 18px;
   min-height: 18px;
@@ -213,7 +214,6 @@ body {
 
 .main-container {
   flex-grow: 1;
-  padding-top: 52px;
 }
 
 .main-content {
@@ -221,7 +221,7 @@ body {
   background-color: #ffffff;
   background-image: url("../image/background/background-main-page-header.jpg");
   background-repeat: no-repeat;
-  background-size: 100% auto;
+  background-size: 100% 485px;
 }
 
 .page-container {
@@ -230,7 +230,7 @@ body {
   background-image: url(../image/bottom-decor.svg);
   background-repeat: no-repeat;
   background-position-x: center;
-  background-position-y: 14.65%;
+  background-position-y: 12.48%;
 }
 
 .page-container-catalog {
@@ -257,7 +257,7 @@ body {
   font-weight: 700;
   text-transform: uppercase;
   margin: 0;
-  margin-top: 227px;
+  margin-top: 145px;
 }
 
 .slogan-advantages {
@@ -326,6 +326,7 @@ body {
   padding-bottom: 87px;
   color: #333333;
   margin: 0;
+  min-width: 250px;
 }
 
 .advantages-number {
@@ -343,13 +344,13 @@ body {
 .food {
   background-image: url(../image/advantages/icon-advantages-2.svg);
   background-repeat: no-repeat;
-  background-position: top 63px left 163px;
+  background-position: top 91px left 163px;
   background-color: #ffffff;
   padding: 0 75px;
 }
 
 .other-title {
-  padding-top: 156px;
+  padding-top: 184px;
   padding-bottom: 0;
 }
 
@@ -362,13 +363,13 @@ body {
 .house {
   background-image: url(../image/advantages/icon-advantages-1.svg);
   background-repeat: no-repeat;
-  background-position: top 61px left 163px;
+  background-position: top 89px left 163px;
 }
 
 .souvenirs{
   background-image: url(../image/advantages/icon-advantages-3.svg);
   background-repeat: no-repeat;
-  background-position: top 57px left 168px;
+  background-position: top 85px left 168px;
 }
 
 /* Три карточки четвертого ряда */
@@ -407,6 +408,7 @@ body {
 
 .sedona-life {
   color: #ffffff;
+  min-width: 220px;
 }
 
 .bridge {
@@ -415,6 +417,7 @@ body {
 
 .open-bridge {
   color: #ffffff;
+  min-width: 220px;
 }
 
 /* Форма поиска */
@@ -500,7 +503,7 @@ body {
   font-size: 22px;
   line-height: 26px;
   text-align: center;
-  margin-top: 43px;
+  margin-top: 73px;
   margin-bottom: 100px;
 }
 
@@ -536,9 +539,15 @@ body {
   justify-content: center;
 }
 
+.form-light {
+  margin-bottom: 141px;
+}
+
 .distribution-text {
   font-family: inherit;
   width: 600px;
+  font-size: 18px;
+  line-height: 26px;
   border-radius: 10px 0px 0px 10px;
   padding-left: 19px;
   padding-right: 16px;
@@ -566,7 +575,7 @@ body {
   font-family: inherit;
   color: #ffffff;
   background-color: #83B3D3;
-  width: 200px;
+  min-width: 200px;
   height: 60px;
   font-size: 20px;
   line-height: 26px;
@@ -1036,6 +1045,8 @@ body {
   margin-left: -153px;
 }
 
+/* Тултип */
+
 .tooltip-toggle {
   border: none;
   padding: 0;
@@ -1118,8 +1129,10 @@ body {
   font-size: 60px;
   line-height: 78px;
   font-weight: 700;
-  height: 68px;
+  min-height: 68px;
 }
+
+/* Хлебные крошки */
 
 .breadcrumbs {
   display: flex;
@@ -1127,12 +1140,14 @@ body {
   margin: 0;
   padding: 0;
   list-style-type: none;
-  margin-top: 5px;
+  margin-top: -8px;
 }
 
 .breadcrumbs-link {
   position: relative;
   color: inherit;
+  font-size: 16px;
+  line-height: 21px;
 }
 
 .breadcrumbs-link-hotel:hover {
@@ -1243,12 +1258,6 @@ body {
   padding-left: 23px;
 }
 
-.control-input {
-  margin: 0;
-  z-index: -1;
-  opacity: 0;
-}
-
 .control-mark {
   position: absolute;
   width: 20px;
@@ -1262,7 +1271,7 @@ body {
   background-color: #FFFFFF99;
 }
 
-.control-mark:focus {
+.control-input:focus + .control-mark {
   border: 3px solid #83B3D3;
   box-sizing: content-box;
   opacity: 0.6;
@@ -1274,10 +1283,16 @@ body {
   background-color: #FFFFFF4D;
 }
 
-.checked-checkbox {
+.control-input[type="checkbox"]:checked + .control-mark::before,
+.control-input[type="checkbox"]:checked + .control-mark::after {
+  position: absolute;
+  top: 5px;
+  left: 4px;
+  width: 12px;
+  height: 10px;
+  content: "";
   background-image: url(../image/checkbox-mark.svg);
   background-repeat: no-repeat;
-  background-position: center;
 }
 
 .control-mark-radio {
@@ -1289,23 +1304,31 @@ body {
   left: 0;
 }
 
-.control-mark-radio:focus {
-  border: 3px solid #83B3D3;
+.control-input[type="radio"]:checked + .control-mark-radio::before {
+  position: absolute;
+  top: 25%;
+  left: 25%;
+  width: 10px;
+  height: 10px;
+  background-color: #3F5E72;
+  border-radius: 50%;
+  content: "";
 }
 
-.checked-radio {
-  background-image: url(../image/radio-mark.svg);
-  background-repeat: no-repeat;
-  background-position: 50% 50%;
-}
-
-.checked-radio:focus {
+.control-input:checked:focus + .control-mark-radio {
   border: 3px solid #83B3D3;
   box-sizing: content-box;
   border-radius: 30px;
   margin-left: -3px;
   margin-top: -3px;
-  background-position: 45% 40%;
+}
+
+.control-input:focus + .control-mark-radio {
+  border: 3px solid #83B3D3;
+}
+
+.control-label {
+  margin-left: 19px;
 }
 
 .range {
@@ -1317,7 +1340,7 @@ body {
   position: relative;
   height: 4px;
   margin-top: 32px;
-  margin-bottom: 6px;
+  margin-bottom: 10px;
   background-color: #FFFFFF4D;
 }
 
@@ -1352,30 +1375,15 @@ body {
 
 .toggle-max {
   top: -8px;
-  left: 215px;
+  left: 202px;
 }
 
 .range-wrapper-inputs {
   display: flex;
   width: 287px;
   justify-content: center;
-  /*border: 2px solid #FFFFFF;
-  border-radius: 4px;*/
   position: relative;
 }
-
-/*.range-wrapper-inputs::before {
-  position: absolute;
-  content: "";
-  top: 21px;
-  right: 0;
-  bottom: 0;
-  left: 118px;
-  height: 2px;
-  width: 48px;
-  transform: rotate(90deg);
-  background-color: #FFFFFF;
-}*/
 
 .label-min-price::before {
   position: absolute;
@@ -1487,7 +1495,7 @@ body {
   background: none;
   border: none;
   width: 100px;
-  height: 32px;
+  min-height: 23px;
   margin-left: 30px;
   cursor: pointer;
 }
@@ -1499,11 +1507,15 @@ body {
 .filter-button-reset:focus {
   border: 3px solid #83B3D3;
   border-radius: 4px;
+  height: 32px;
+  margin-bottom: -3px;
 }
 
 .filter-button-reset:active {
   color: #FFFFFF4D;
 }
+
+/* Сортировка */
 
 .sorting-container {
   display: flex;
@@ -1657,6 +1669,10 @@ body {
   margin-top: 16px;
 }
 
+.catalog-card-link {
+  text-decoration: none;
+}
+
 .catalog-card-title {
   margin: 0;
   margin-top: 11px;
@@ -1742,7 +1758,6 @@ body {
   text-transform: uppercase;
   font-weight: 700;
   text-decoration: none;
-  /*height: 18px;*/
   padding-top: 8px;
   padding-bottom: 8px;
   border-radius: 4px;
@@ -1799,7 +1814,7 @@ body {
   margin: 0 auto;
   margin-bottom: 60px;
   width: 620px;
-  height: 60px;
+  min-height: 60px;
   border-radius: 4px;
   cursor: pointer;
 }
@@ -1828,7 +1843,6 @@ body {
 
 .pagination-container {
   display: flex;
-  padding: 30px 0;
   background-color: #ffffff;
   margin-left: 72px;
   margin-right: 72px;
@@ -1849,9 +1863,9 @@ body {
 .pagination-link {
   display: block;
   box-sizing: border-box;
-  padding: 17px;
-  width: 55px;
-  height: 55px;
+  padding: 14px;
+  min-width: 55px;
+  min-height: 55px;
   font-size: 20px;
   line-height: 26px;
   font-weight: 700;
